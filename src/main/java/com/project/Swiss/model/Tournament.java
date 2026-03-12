@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
+import java.util.List;
 
 
 @Entity
@@ -28,5 +29,8 @@ public class Tournament {
 
     @Positive
     private Integer rounds;
+
+    @OneToMany(mappedBy = "tournament")
+    private List<Player> players;
 
 }

@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface IPlayerService {
 
-    public void addPlayer(Player pPlayer);
+    public void createPlayer(Player pPlayer);
 
     public void updatePlayer(Player pPlayer);
 
-    public void deletePlayer(Long pId);
+    public void deletePlayer(Player pPlayer);
 
-    public List<Player> getAllPlayers();
+    public List<Player> getAllPlayers(Long tId);
 
-    public List<Player> searchPlayer(String pName);
+    public List<Player> searchPlayer(String name, Long tId);
 }

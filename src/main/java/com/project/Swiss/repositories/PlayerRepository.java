@@ -13,4 +13,7 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     List<Player> findByTournament(Tournament tournament);
     // Find players by tournament ordered by score descending (for standings)
     List<Player> findByTournamentOrderByScoreDesc(Tournament tournament);
+
+    List<Player> findByNameContainingIgnoreCaseAndTournament(String name, Tournament tournament);
+
 }
