@@ -46,5 +46,10 @@ public class PlayerServiceImpl implements IPlayerService{
         return playerRepo.findByNameContainingIgnoreCaseAndTournament(name, tournament);
     }
 
+    @Override
+    public Player getPlayer(Long pId) {
+        return playerRepo.findById(pId)
+                .orElseThrow(() -> new RuntimeException("Player not found : " + pId));
+    }
 
 }

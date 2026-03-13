@@ -15,4 +15,6 @@ public interface IPlayerService {
     public List<Player> getAllPlayers(Long tId);
 
     public List<Player> searchPlayer(String name, Long tId);
+
+    public Player getPlayer(Long pId);
 }

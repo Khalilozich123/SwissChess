@@ -16,7 +16,7 @@ public class Tournament {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @NotBlank(message = "Name is required for this tournament")
     private String name;
